@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESP32 Sensor Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body class="bg-gradient-to-r from-purple-500 via-indigo-500 to-blue-500 text-white font-sans ">
+    <!-- Header Section -->
+    <div class="flex flex-col items-center py-8">
+        <h1 class="text-4xl font-extrabold mb-6 text-center text-white">📊 Real-time environment monitoring system</h1>
+        <p class="text-xl">Real-time data from your monitoring system!</p>
+    </div>
+
+    <!-- Container for the three sections -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-8 shadow-inner">
+        <!-- Temperature Section -->
+        <div
+            class="bg-gradient-to-r from-yellow-300 via-orange-200 to-red-300 text-black p-6 rounded-xl shadow-lg opacity-90">
+            <div class="text-4xl font-bold mb-9">🌡️ Temperature</div>
+            <div class="text-xl mb-4" id="tempValue">Loading...</div>
+            <canvas id="tempChart" class="w-full h-64"></canvas>
+        </div>
+
+        <!-- Humidity Section -->
+        <div class="bg-gradient-to-r from-sky-300 via-indigo-200 to-purple-400 text-black p-6 rounded-xl shadow-lg opacity-90">
+            <div class="text-4xl font-bold mb-4">💧 Humidity</div>
+            <div class="text-xl mb-4" id="humidityValue">Loading...</div>
+            <canvas id="humidityChart" class="w-full h-64"></canvas>
+        </div>
+
+        <!-- Air Quality Section -->
+        <div class="bg-gradient-to-r from-lime-300 via-emerald-200 to-teal-400 text-black p-6 rounded-xl shadow-lg opacity-90">
+            <div class="text-4xl font-bold mb-4">🫁 Air Quality</div>
+            <div class="text-xl mb-4" id="airQualityValue">Loading...</div>
+            <canvas id="airQualityChart" class="w-full h-64"></canvas>
+        </div>
+    </div>
+
+    <!-- JavaScript for Data Fetching and Graph Updates -->
+    
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="script.js"></script>
+  
+    
+</body>
+
+</html>
